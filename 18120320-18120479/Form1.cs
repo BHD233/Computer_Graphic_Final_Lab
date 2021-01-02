@@ -61,11 +61,14 @@ namespace _18120320_Lab1
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
             gl.Translate(0.0f, 0.0f, -6.0f);
+            gl.Rotate(rtri, rtri, 0.0f);
+            rtri += 1.0f;
 
             foreach (Object obj in drawObjs)
             {
                 obj.Draw(gl);
             }
+
         }
 
         private void colorHexagon_ColorChanged(object sender, MechanikaDesign.WinForms.UI.ColorPicker.ColorChangedEventArgs args)
@@ -79,6 +82,58 @@ namespace _18120320_Lab1
             drawObjs.Add(new Cube());
             objNames.Add("cube" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+        }
+
+        private void pyramidButton_Click(object sender, EventArgs e)
+        {
+            drawObjs.Add(new Pyramid());
+            objNames.Add("pyramid" + objNames.Count.ToString());
+            objectList.Items.Add(objNames[objNames.Count - 1]);
+        }
+
+        private void posXInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void posYInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void posZInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RotXInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RotYInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RotZInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScalXInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScalYInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScalZInput_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
