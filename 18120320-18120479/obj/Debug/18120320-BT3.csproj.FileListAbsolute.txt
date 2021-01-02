@@ -1,0 +1,31 @@
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\18120320-Lab1.exe.config
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\18120320-Lab1.exe
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\18120320-Lab1.pdb
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\ColorHexagon.dll
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\SharpGL.dll
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\SharpGL.SceneGraph.dll
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\SharpGL.WinForms.dll
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\bin\Debug\ColorHexagon.pdb
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\_18120320_Lab1.SharpGLForm.resources
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\_18120320_Lab1.Properties.Resources.resources
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\18120320-BT3.csproj.GenerateResource.cache
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\18120320-BT3.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\18120320-BT3.csproj.CopyComplete
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\18120320-Lab1.exe
+D:\OneDrive\OneDrive - VNU-HCMUS\ĐH\HK5\ComputerGraphic\Lab\Lab3\18120320-BT2-vs\18120320-BT3\obj\Debug\18120320-Lab1.pdb
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\18120320-Lab1.exe.config
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\18120320-Lab1.exe
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\18120320-Lab1.pdb
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\ColorHexagon.dll
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\SharpGL.dll
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\SharpGL.SceneGraph.dll
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\SharpGL.WinForms.dll
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\bin\Debug\ColorHexagon.pdb
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\_18120320_Lab1.SharpGLForm.resources
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\_18120320_Lab1.Properties.Resources.resources
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\18120320-BT3.csproj.GenerateResource.cache
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\18120320-BT3.csproj.CoreCompileInputs.cache
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\18120320-BT3.csproj.CopyComplete
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\18120320-Lab1.exe
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\18120320-Lab1.pdb
+C:\Users\buihu\Downloads\Lab3\Lab3\18120320_BT3\Source\18120320-BT3\18120320-BT3\obj\Debug\18120320-BT3.csprojAssemblyReference.cache
