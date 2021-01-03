@@ -89,7 +89,7 @@ namespace _18120320_Lab1
             this.openGLControl.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.openGLControl.RenderContextType = SharpGL.RenderContextType.DIBSection;
             this.openGLControl.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
-            this.openGLControl.Size = new System.Drawing.Size(1234, 934);
+            this.openGLControl.Size = new System.Drawing.Size(1126, 934);
             this.openGLControl.TabIndex = 8;
             this.openGLControl.OpenGLDraw += new SharpGL.RenderEventHandler(this.openGLControl_OpenGLDraw);
             // 
@@ -254,10 +254,10 @@ namespace _18120320_Lab1
             this.panel1.Controls.Add(this.posXInput);
             this.panel1.Controls.Add(this.objName);
             this.panel1.Controls.Add(this.x);
-            this.panel1.Location = new System.Drawing.Point(1523, 383);
+            this.panel1.Location = new System.Drawing.Point(1418, 372);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 212);
+            this.panel1.Size = new System.Drawing.Size(359, 266);
             this.panel1.TabIndex = 13;
             // 
             // label10
@@ -508,9 +508,9 @@ namespace _18120320_Lab1
             // 
             this.objectList.FormattingEnabled = true;
             this.objectList.ItemHeight = 16;
-            this.objectList.Location = new System.Drawing.Point(1523, 12);
+            this.objectList.Location = new System.Drawing.Point(1609, 12);
             this.objectList.Name = "objectList";
-            this.objectList.Size = new System.Drawing.Size(254, 340);
+            this.objectList.Size = new System.Drawing.Size(168, 340);
             this.objectList.TabIndex = 22;
             this.objectList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.objectListClick);
             // 
@@ -519,7 +519,7 @@ namespace _18120320_Lab1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1782, 953);
+            this.ClientSize = new System.Drawing.Size(1807, 953);
             this.Controls.Add(this.objectList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
