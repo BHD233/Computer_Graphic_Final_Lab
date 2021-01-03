@@ -18,40 +18,40 @@ namespace _18120320_Lab1.Properties
             gl.Begin(OpenGL.GL_QUADS);
 
             // Front Face
-            gl.TexCoord(0.0f, 0.0f); gl.Vertex(-1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-            gl.TexCoord(1.0f, 0.0f); gl.Vertex(1.0f, -1.0f, 1.0f);  // Bottom Right Of The Texture and Quad
-            gl.TexCoord(1.0f, 1.0f); gl.Vertex(1.0f, 1.0f, 1.0f);   // Top Right Of The Texture and Quad
-            gl.TexCoord(0.0f, 1.0f); gl.Vertex(-1.0f, 1.0f, 1.0f);  // Top Left Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.0f); gl.Vertex(-0.3f, -0.3f, 0.3f); // Bottom Left Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.0f); gl.Vertex(0.3f, -0.3f, 0.3f);  // Bottom Right Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.3f); gl.Vertex(0.3f, 0.3f, 0.3f);   // Top Right Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.3f); gl.Vertex(-0.3f, 0.3f, 0.3f);  // Top Left Of The Texture and Quad
 
             // Back Face
-            gl.TexCoord(1.0f, 0.0f); gl.Vertex(-1.0f, -1.0f, -1.0f);    // Bottom Right Of The Texture and Quad
-            gl.TexCoord(1.0f, 1.0f); gl.Vertex(-1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
-            gl.TexCoord(0.0f, 1.0f); gl.Vertex(1.0f, 1.0f, -1.0f);  // Top Left Of The Texture and Quad
-            gl.TexCoord(0.0f, 0.0f); gl.Vertex(1.0f, -1.0f, -1.0f); // Bottom Left Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.0f); gl.Vertex(-0.3f, -0.3f, -0.3f);    // Bottom Right Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.3f); gl.Vertex(-0.3f, 0.3f, -0.3f); // Top Right Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.3f); gl.Vertex(0.3f, 0.3f, -0.3f);  // Top Left Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.0f); gl.Vertex(0.3f, -0.3f, -0.3f); // Bottom Left Of The Texture and Quad
 
             // Top Face
-            gl.TexCoord(0.0f, 1.0f); gl.Vertex(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-            gl.TexCoord(0.0f, 0.0f); gl.Vertex(-1.0f, 1.0f, 1.0f);  // Bottom Left Of The Texture and Quad
-            gl.TexCoord(1.0f, 0.0f); gl.Vertex(1.0f, 1.0f, 1.0f);   // Bottom Right Of The Texture and Quad
-            gl.TexCoord(1.0f, 1.0f); gl.Vertex(1.0f, 1.0f, -1.0f);  // Top Right Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.3f); gl.Vertex(-0.3f, 0.3f, -0.3f); // Top Left Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.0f); gl.Vertex(-0.3f, 0.3f, 0.3f);  // Bottom Left Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.0f); gl.Vertex(0.3f, 0.3f, 0.3f);   // Bottom Right Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.3f); gl.Vertex(0.3f, 0.3f, -0.3f);  // Top Right Of The Texture and Quad
 
             // Bottom Face
-            gl.TexCoord(1.0f, 1.0f); gl.Vertex(-1.0f, -1.0f, -1.0f);    // Top Right Of The Texture and Quad
-            gl.TexCoord(0.0f, 1.0f); gl.Vertex(1.0f, -1.0f, -1.0f); // Top Left Of The Texture and Quad
-            gl.TexCoord(0.0f, 0.0f); gl.Vertex(1.0f, -1.0f, 1.0f);  // Bottom Left Of The Texture and Quad
-            gl.TexCoord(1.0f, 0.0f); gl.Vertex(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.3f); gl.Vertex(-0.3f, -0.3f, -0.3f);    // Top Right Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.3f); gl.Vertex(0.3f, -0.3f, -0.3f); // Top Left Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.0f); gl.Vertex(0.3f, -0.3f, 0.3f);  // Bottom Left Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.0f); gl.Vertex(-0.3f, -0.3f, 0.3f); // Bottom Right Of The Texture and Quad
 
             // Right face
-            gl.TexCoord(1.0f, 0.0f); gl.Vertex(1.0f, -1.0f, -1.0f); // Bottom Right Of The Texture and Quad
-            gl.TexCoord(1.0f, 1.0f); gl.Vertex(1.0f, 1.0f, -1.0f);  // Top Right Of The Texture and Quad
-            gl.TexCoord(0.0f, 1.0f); gl.Vertex(1.0f, 1.0f, 1.0f);   // Top Left Of The Texture and Quad
-            gl.TexCoord(0.0f, 0.0f); gl.Vertex(1.0f, -1.0f, 1.0f);  // Bottom Left Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.0f); gl.Vertex(0.3f, -0.3f, -0.3f); // Bottom Right Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.3f); gl.Vertex(0.3f, 0.3f, -0.3f);  // Top Right Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.3f); gl.Vertex(0.3f, 0.3f, 0.3f);   // Top Left Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.0f); gl.Vertex(0.3f, -0.3f, 0.3f);  // Bottom Left Of The Texture and Quad
 
             // Left Face
-            gl.TexCoord(0.0f, 0.0f); gl.Vertex(-1.0f, -1.0f, -1.0f);    // Bottom Left Of The Texture and Quad
-            gl.TexCoord(1.0f, 0.0f); gl.Vertex(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-            gl.TexCoord(1.0f, 1.0f); gl.Vertex(-1.0f, 1.0f, 1.0f);  // Top Right Of The Texture and Quad
-            gl.TexCoord(0.0f, 1.0f); gl.Vertex(-1.0f, 1.0f, -1.0f);	// Top Left Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.0f); gl.Vertex(-0.3f, -0.3f, -0.3f);    // Bottom Left Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.0f); gl.Vertex(-0.3f, -0.3f, 0.3f); // Bottom Right Of The Texture and Quad
+            gl.TexCoord(0.3f, 0.3f); gl.Vertex(-0.3f, 0.3f, 0.3f);  // Top Right Of The Texture and Quad
+            gl.TexCoord(0.0f, 0.3f); gl.Vertex(-0.3f, 0.3f, -0.3f);	// Top Left Of The Texture and Quad
 
 
             gl.End();
@@ -60,45 +60,45 @@ namespace _18120320_Lab1.Properties
             gl.LineWidth(OutlineWeight);
             gl.Begin(OpenGL.GL_LINES);
 
-            gl.Vertex(-1.0f, -1.0f, 1.0f);
-            gl.Vertex(1.0f, -1.0f, 1.0f);
-            gl.Vertex(1.0f, 1.0f, 1.0f);
-            gl.Vertex(-1.0f, 1.0f, 1.0f);
-            gl.Vertex(-1.0f, -1.0f, 1.0f);
+            gl.Vertex(-0.3f, -0.3f, 0.3f);
+            gl.Vertex(0.3f, -0.3f, 0.3f);
+            gl.Vertex(0.3f, 0.3f, 0.3f);
+            gl.Vertex(-0.3f, 0.3f, 0.3f);
+            gl.Vertex(-0.3f, -0.3f, 0.3f);
 
 
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
-            gl.Vertex(-1.0f, 1.0f, -1.0f);
-            gl.Vertex(1.0f, 1.0f, -1.0f);
-            gl.Vertex(1.0f, -1.0f, -1.0f);
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
+            gl.Vertex(-0.3f, -0.3f, -0.3f);
+            gl.Vertex(-0.3f, 0.3f, -0.3f);
+            gl.Vertex(0.3f, 0.3f, -0.3f);
+            gl.Vertex(0.3f, -0.3f, -0.3f);
+            gl.Vertex(-0.3f, -0.3f, -0.3f);
 
 
-            gl.Vertex(-1.0f, 1.0f, -1.0f);
-            gl.Vertex(-1.0f, 1.0f, 1.0f);
-            gl.Vertex(1.0f, 1.0f, 1.0f);
-            gl.Vertex(1.0f, 1.0f, -1.0f);
-            gl.Vertex(-1.0f, 1.0f, -1.0f);
+            gl.Vertex(-0.3f, 0.3f, -0.3f);
+            gl.Vertex(-0.3f, 0.3f, 0.3f);
+            gl.Vertex(0.3f, 0.3f, 0.3f);
+            gl.Vertex(0.3f, 0.3f, -0.3f);
+            gl.Vertex(-0.3f, 0.3f, -0.3f);
 
 
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
-            gl.Vertex(1.0f, -1.0f, -1.0f);
-            gl.Vertex(1.0f, -1.0f, 1.0f);
-            gl.Vertex(-1.0f, -1.0f, 1.0f);
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
+            gl.Vertex(-0.3f, -0.3f, -0.3f);
+            gl.Vertex(0.3f, -0.3f, -0.3f);
+            gl.Vertex(0.3f, -0.3f, 0.3f);
+            gl.Vertex(-0.3f, -0.3f, 0.3f);
+            gl.Vertex(-0.3f, -0.3f, -0.3f);
 
 
-            gl.Vertex(1.0f, -1.0f, -1.0f);
-            gl.Vertex(1.0f, 1.0f, -1.0f);
-            gl.Vertex(1.0f, 1.0f, 1.0f);
-            gl.Vertex(1.0f, -1.0f, 1.0f);
-            gl.Vertex(1.0f, -1.0f, -1.0f);
+            gl.Vertex(0.3f, -0.3f, -0.3f);
+            gl.Vertex(0.3f, 0.3f, -0.3f);
+            gl.Vertex(0.3f, 0.3f, 0.3f);
+            gl.Vertex(0.3f, -0.3f, 0.3f);
+            gl.Vertex(0.3f, -0.3f, -0.3f);
 
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
-            gl.Vertex(-1.0f, -1.0f, 1.0f);
-            gl.Vertex(-1.0f, 1.0f, 1.0f);
-            gl.Vertex(-1.0f, 1.0f, -1.0f);
-            gl.Vertex(-1.0f, -1.0f, -1.0f);
+            gl.Vertex(-0.3f, -0.3f, -0.3f);
+            gl.Vertex(-0.3f, -0.3f, 0.3f);
+            gl.Vertex(-0.3f, 0.3f, 0.3f);
+            gl.Vertex(-0.3f, 0.3f, -0.3f);
+            gl.Vertex(-0.3f, -0.3f, -0.3f);
 
             gl.End();
 

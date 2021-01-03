@@ -16,7 +16,7 @@ namespace _18120320_Lab1
         List<Object> drawObjs = new List<Object>();
         List<String> objNames = new List<String>();
         Color color = Color.Black;
-
+        int chosenObj = 0;
         //================new
         float rtri = 0;
 
@@ -55,17 +55,32 @@ namespace _18120320_Lab1
             gl.LoadIdentity();
             gl.Translate(0.0f, 0.0f, -6.0f);
             gl.Rotate(rtri, 0.0f, 1.0f, 0.0f);
+            int i = 0;
             foreach (Object obj in drawObjs)
             {
                 obj.Draw(gl);
+
+                if (i == chosenObj)
+                {
+                    obj.OutlineColor = Color.Orange;
+                }
+                else
+                {
+                    obj.OutlineColor = Color.Gray;
+                }
+                i++;
+
             }
             rtri += 1.0f;// 0.2f;	
+
         }
 
         private void colorHexagon_ColorChanged(object sender, MechanikaDesign.WinForms.UI.ColorPicker.ColorChangedEventArgs args)
         {
             //change color base on what user chose
             color = colorHexagon.SelectedColor;
+            drawObjs[chosenObj].ObjColor = color;
+
         }
 
         private void cubeButton_Click(object sender, EventArgs e)
@@ -73,13 +88,40 @@ namespace _18120320_Lab1
             drawObjs.Add(new Cube());
             objNames.Add("cube" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+
+
+            listObjects.Items.Add("cube" + objNames.Count.ToString());
+            
         }
 
         private void prismButton_Click(object sender, EventArgs e)
         {
             drawObjs.Add(new Prism());
-            objNames.Add("cube" + objNames.Count.ToString());
+            objNames.Add("prism" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+
+            listObjects.Items.Add("prism" + objNames.Count.ToString());
+
+            //foreach (var i in listObjects.Items)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+        }
+
+        private void listObjectsClick(object sender, MouseEventArgs e)
+        {
+            // Get vị trí click chuột
+            int index = this.listObjects.IndexFromPoint(e.Location);
+            Console.WriteLine(index);
+
+            //nếu chuột nằm trên item có vị trí index thì drawObject[index] được tô viền màu
+            if (index != -1)
+            {
+                //drawObjs[index].OutlineColor = Color.Orange;
+                chosenObj = index;
+                
+            }
         }
     }
 }

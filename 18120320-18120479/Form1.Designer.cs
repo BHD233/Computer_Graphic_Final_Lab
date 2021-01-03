@@ -52,6 +52,7 @@ namespace _18120320_Lab1
             this.cubeButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.listObjects = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@ namespace _18120320_Lab1
             this.openGLControl.BackColor = System.Drawing.SystemColors.Window;
             this.openGLControl.DrawFPS = false;
             this.openGLControl.Location = new System.Drawing.Point(377, 15);
-            this.openGLControl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.openGLControl.Margin = new System.Windows.Forms.Padding(5);
             this.openGLControl.Name = "openGLControl";
             this.openGLControl.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.openGLControl.RenderContextType = SharpGL.RenderContextType.DIBSection;
@@ -72,7 +73,7 @@ namespace _18120320_Lab1
             // colorHexagon
             // 
             this.colorHexagon.Location = new System.Drawing.Point(1, 15);
-            this.colorHexagon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorHexagon.Margin = new System.Windows.Forms.Padding(4);
             this.colorHexagon.Name = "colorHexagon";
             this.colorHexagon.Size = new System.Drawing.Size(368, 404);
             this.colorHexagon.TabIndex = 10;
@@ -189,7 +190,7 @@ namespace _18120320_Lab1
             this.objectList.FullRowSelect = true;
             this.objectList.HideSelection = false;
             this.objectList.Location = new System.Drawing.Point(2031, 15);
-            this.objectList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.objectList.Margin = new System.Windows.Forms.Padding(4);
             this.objectList.Name = "objectList";
             this.objectList.Size = new System.Drawing.Size(339, 410);
             this.objectList.TabIndex = 0;
@@ -200,7 +201,7 @@ namespace _18120320_Lab1
             // cubeButton
             // 
             this.cubeButton.Location = new System.Drawing.Point(35, 457);
-            this.cubeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cubeButton.Margin = new System.Windows.Forms.Padding(4);
             this.cubeButton.Name = "cubeButton";
             this.cubeButton.Size = new System.Drawing.Size(100, 28);
             this.cubeButton.TabIndex = 11;
@@ -230,18 +231,29 @@ namespace _18120320_Lab1
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.prismButton_Click);
             // 
+            // listObjects
+            // 
+            this.listObjects.FormattingEnabled = true;
+            this.listObjects.ItemHeight = 16;
+            this.listObjects.Location = new System.Drawing.Point(214, 457);
+            this.listObjects.Name = "listObjects";
+            this.listObjects.Size = new System.Drawing.Size(120, 84);
+            this.listObjects.TabIndex = 12;
+            this.listObjects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listObjectsClick);
+            // 
             // SharpGLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.listObjects);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cubeButton);
             this.Controls.Add(this.objectList);
             this.Controls.Add(this.colorHexagon);
             this.Controls.Add(this.openGLControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1918, 1040);
             this.Name = "SharpGLForm";
             this.Text = "18120320-Bui_Huu_Duc";
@@ -278,6 +290,7 @@ namespace _18120320_Lab1
         private System.Windows.Forms.Button cubeButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listObjects;
     }
 }
 
