@@ -16,12 +16,16 @@ namespace _18120320_Lab1
         public double Y = 0;
         public double Z = 0;
 
-
         public CustomPoint(double x, double y, double z)
         {
             X = x;
             Y = y;
             Z = z;
+        }
+
+        {
+            X = p.X;
+            Y = p.Y;
         }
 
         public CustomPoint()
