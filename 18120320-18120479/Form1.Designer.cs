@@ -82,20 +82,22 @@ namespace _18120320_Lab1
             // 
             this.openGLControl.BackColor = System.Drawing.SystemColors.Window;
             this.openGLControl.DrawFPS = false;
-            this.openGLControl.Location = new System.Drawing.Point(283, 12);
+            this.openGLControl.Location = new System.Drawing.Point(377, 15);
+            this.openGLControl.Margin = new System.Windows.Forms.Padding(5);
             this.openGLControl.Name = "openGLControl";
             this.openGLControl.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.openGLControl.RenderContextType = SharpGL.RenderContextType.DIBSection;
             this.openGLControl.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
-            this.openGLControl.Size = new System.Drawing.Size(1234, 943);
+            this.openGLControl.Size = new System.Drawing.Size(1645, 1161);
             this.openGLControl.TabIndex = 8;
             this.openGLControl.OpenGLDraw += new SharpGL.RenderEventHandler(this.openGLControl_OpenGLDraw);
             // 
             // colorHexagon
             // 
-            this.colorHexagon.Location = new System.Drawing.Point(1, 12);
+            this.colorHexagon.Location = new System.Drawing.Point(1, 15);
+            this.colorHexagon.Margin = new System.Windows.Forms.Padding(4);
             this.colorHexagon.Name = "colorHexagon";
-            this.colorHexagon.Size = new System.Drawing.Size(276, 328);
+            this.colorHexagon.Size = new System.Drawing.Size(368, 404);
             this.colorHexagon.TabIndex = 10;
             this.colorHexagon.ColorChanged += new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon.ColorChangedEventHandler(this.colorHexagon_ColorChanged);
             // 
@@ -117,7 +119,7 @@ namespace _18120320_Lab1
             // 
             this.weightEditText.Location = new System.Drawing.Point(0, 0);
             this.weightEditText.Name = "weightEditText";
-            this.weightEditText.Size = new System.Drawing.Size(100, 20);
+            this.weightEditText.Size = new System.Drawing.Size(100, 22);
             this.weightEditText.TabIndex = 0;
             // 
             // weightEditor
@@ -209,9 +211,10 @@ namespace _18120320_Lab1
             this.objectList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.objectList.FullRowSelect = true;
             this.objectList.HideSelection = false;
-            this.objectList.Location = new System.Drawing.Point(1523, 12);
+            this.objectList.Location = new System.Drawing.Point(2031, 15);
+            this.objectList.Margin = new System.Windows.Forms.Padding(4);
             this.objectList.Name = "objectList";
-            this.objectList.Size = new System.Drawing.Size(255, 334);
+            this.objectList.Size = new System.Drawing.Size(339, 410);
             this.objectList.TabIndex = 0;
             this.objectList.TileSize = new System.Drawing.Size(200, 40);
             this.objectList.UseCompatibleStateImageBehavior = false;
@@ -219,9 +222,10 @@ namespace _18120320_Lab1
             // 
             // cubeButton
             // 
-            this.cubeButton.Location = new System.Drawing.Point(26, 371);
+            this.cubeButton.Location = new System.Drawing.Point(35, 457);
+            this.cubeButton.Margin = new System.Windows.Forms.Padding(4);
             this.cubeButton.Name = "cubeButton";
-            this.cubeButton.Size = new System.Drawing.Size(75, 23);
+            this.cubeButton.Size = new System.Drawing.Size(100, 28);
             this.cubeButton.TabIndex = 11;
             this.cubeButton.Text = "CUBE";
             this.cubeButton.UseVisualStyleBackColor = true;
@@ -478,19 +482,56 @@ namespace _18120320_Lab1
             this.label13.Text = "X";
             this.label13.UseMnemonic = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(35, 493);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "CUBE";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.cubeButton_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(35, 529);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "PRISM";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.prismButton_Click);
+            // 
+            // listObjects
+            // 
+            this.listObjects.FormattingEnabled = true;
+            this.listObjects.ItemHeight = 16;
+            this.listObjects.Location = new System.Drawing.Point(214, 457);
+            this.listObjects.Name = "listObjects";
+            this.listObjects.Size = new System.Drawing.Size(120, 84);
+            this.listObjects.TabIndex = 12;
+            this.listObjects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listObjectsClick);
+            // 
             // SharpGLForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1784, 961);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.listObjects);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pyramidButton);
             this.Controls.Add(this.cubeButton);
             this.Controls.Add(this.objectList);
             this.Controls.Add(this.colorHexagon);
             this.Controls.Add(this.openGLControl);
-            this.MinimumSize = new System.Drawing.Size(1800, 1000);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1918, 1040);
             this.Name = "SharpGLForm";
             this.Text = "18120320-Bui_Huu_Duc";
             this.Load += new System.EventHandler(this.ShapGLForm_Load);
@@ -526,8 +567,8 @@ namespace _18120320_Lab1
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.ListView objectList;
         private System.Windows.Forms.Button cubeButton;
-        private System.Windows.Forms.Button pyramidButton;
-        private System.Windows.Forms.Panel panel1;
+    }
+}
         private System.Windows.Forms.Label x;
         private System.Windows.Forms.TextBox objName;
         private System.Windows.Forms.Label label10;
@@ -552,4 +593,7 @@ namespace _18120320_Lab1
         private System.Windows.Forms.TextBox posXInput;
     }
 }
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listObjects;
 

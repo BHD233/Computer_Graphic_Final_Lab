@@ -23,6 +23,11 @@ namespace _18120320_Lab1
             Z = z;
         }
 
+        {
+            X = p.X;
+            Y = p.Y;
+        }
+
         public CustomPoint()
         {
             X = 0;
