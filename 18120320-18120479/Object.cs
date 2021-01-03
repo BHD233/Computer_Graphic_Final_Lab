@@ -14,23 +14,21 @@ namespace _18120320_Lab1
     {
         public double X = 0;
         public double Y = 0;
+        public double Z = 0;
 
-        public CustomPoint(double x, double y)
+
+        public CustomPoint(double x, double y, double z)
         {
             X = x;
             Y = y;
-        }
-
-        public CustomPoint(Point p)
-        {
-            X = p.X;
-            Y = p.Y;
+            Z = z;
         }
 
         public CustomPoint()
         {
             X = 0;
             Y = 0;
+            Z = 0;
         }
     }
     //An Object interface for all draw object
@@ -197,11 +195,15 @@ namespace _18120320_Lab1
             {
                 outlineColor = Color.White;
             }
+
+            this.center = new CustomPoint();
         }
 
         public Object()
         {
             this.objColor = Color.Gray;
+
+            this.center = new CustomPoint();
         }
     }
 }
