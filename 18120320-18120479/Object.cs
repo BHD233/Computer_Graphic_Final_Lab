@@ -36,13 +36,15 @@ namespace _18120320_Lab1
     {
         CustomPoint center;
 
-        double scaleX = 1;
+        public double scaleX = 1;
         double scaleY = 1;
-        double scaleZ = 1;
+        public double scaleZ = 1;
 
         float rotateX = 0;
         float rotateY = 0;
         float rotateZ = 0;
+
+        int type;
 
         Color objColor = Color.White;
 
@@ -66,6 +68,17 @@ namespace _18120320_Lab1
             }
         }
 
+        public int Type
+        {
+            set
+            {
+                type = value;
+            }
+            get
+            {
+                return type;
+            }
+        }
         public CustomPoint Center
         {
             set
@@ -77,7 +90,7 @@ namespace _18120320_Lab1
                 return center;
             }
         }
-        public double ScaleX
+        virtual public double ScaleX
         {
             set
             {
@@ -99,7 +112,7 @@ namespace _18120320_Lab1
                 return scaleY;
             }
         }
-        public double ScaleZ
+        virtual public double ScaleZ
         {
             set
             {

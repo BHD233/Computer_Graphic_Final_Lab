@@ -11,7 +11,7 @@ namespace _18120320_Lab1
     {
         public override void Draw(OpenGL gl)
         {
-            gl.Rotate(-RotateX, -RotateY, -RotateZ);
+            gl.Rotate(RotateX, RotateY, RotateZ);
 
             //set drawing color
             gl.Color(ObjColor.R / 255.0, ObjColor.G / 255.0, ObjColor.B / 255.0);

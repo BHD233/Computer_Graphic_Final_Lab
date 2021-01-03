@@ -188,6 +188,10 @@ namespace _18120320_Lab1
             try
             {
                 drawObjs[chosenObj].ScaleX = double.Parse(scalXInput.Text.ToString());
+                if (drawObjs[chosenObj].Type == 2)
+                {
+                    scalZInput.Text = drawObjs[chosenObj].ScaleZ.ToString();
+                }
             }
             catch
             {
@@ -279,17 +283,21 @@ namespace _18120320_Lab1
             {
                 rX++;
             }
-            if (keyData == Keys.Down)
+            else if (keyData == Keys.Down)
             {
                 rX--;
             }
-            if (keyData == Keys.Left)
+            else if (keyData == Keys.Left)
+            {
+                rY--;
+            }
+            else if (keyData == Keys.Right)
             {
                 rY++;
             }
-            if (keyData == Keys.Right)
+            else
             {
-                rY--;
+                return base.ProcessCmdKey(ref msg, keyData);
             }
 
             camera.RX = rX;

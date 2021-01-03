@@ -9,19 +9,24 @@ using System.Threading.Tasks;
 
 namespace _18120320_Lab1
 {
-    class Prism: Object
+    class Prism : Object
     {
         float _length = 2.0f / 3; //độ dài cạnh cua mat day tam giac
         float _height = 1.0f; // chieu cao cua lang tru
         double alpha = 2 * Math.PI / 3;
         double R_bot;
-        public Prism()
+        public Prism() : base()
         {
             R_bot = Math.Sqrt(3) * _length / 3;
+
+            Type = 2;
         }
         public override void Draw(OpenGL gl)
         {
-            gl.Rotate(-RotateX, -RotateY, -RotateZ);
+            _length = (float)(ScaleX / 3);
+            _height = (float)(ScaleY);
+
+            gl.Rotate(RotateX, RotateY, RotateZ);
 
             R_bot = Math.Sqrt(3) * _length / 3;
 
@@ -107,6 +112,31 @@ namespace _18120320_Lab1
             gl.Flush();
 
             gl.Rotate(-RotateX, -RotateY, -RotateZ);
+        }
+
+        public override double ScaleX 
+        {
+            set
+            {
+                scaleX = value;
+                scaleZ = value;
+            }
+            get
+            {
+                return scaleX;
+            }
+        }
+        public override double ScaleZ
+        {
+            set
+            {
+                scaleX = value;
+                scaleZ = value;
+            }
+            get
+            {
+                return scaleZ;
+            }
         }
     }
 }
