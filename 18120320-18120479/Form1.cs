@@ -26,6 +26,10 @@ namespace _18120320_Lab1
 
         //================new
 
+
+        int chosenObj = 0;
+
+
         float rtri = 0;
 
         //  The texture identifier.
@@ -64,9 +68,21 @@ namespace _18120320_Lab1
             gl.Rotate(rtri, rtri, 0.0f);
             rtri += 1.0f;
 
+            int i = 0;
             foreach (Object obj in drawObjs)
             {
                 obj.Draw(gl);
+
+                if (i == chosenObj)
+                {
+                    obj.OutlineColor = Color.Orange;
+                }
+                else
+                {
+                    obj.OutlineColor = Color.Gray;
+                }
+                i++;
+
             }
 
         }
@@ -75,6 +91,7 @@ namespace _18120320_Lab1
         {
             //change color base on what user chose
             color = colorHexagon.SelectedColor;
+drawObjs[chosenObj].ObjColor = color;
         }
 
         private void cubeButton_Click(object sender, EventArgs e)
@@ -88,6 +105,13 @@ namespace _18120320_Lab1
         {
             drawObjs.Add(new Pyramid());
             objNames.Add("pyramid" + objNames.Count.ToString());
+            objectList.Items.Add(objNames[objNames.Count - 1]);
+        }
+
+        private void prismButton_Click(object sender, EventArgs e)
+        {
+            drawObjs.Add(new Prism());
+            objNames.Add("prism" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
         }
 
@@ -135,5 +159,22 @@ namespace _18120320_Lab1
         {
 
         }
+
+
+        private void objectListClick(object sender, MouseEventArgs e)
+        {
+            // Get vị trí click chuột
+            int index = this.objectList.IndexFromPoint(e.Location);
+            Console.WriteLine(index);
+
+            //nếu chuột nằm trên item có vị trí index thì drawObject[index] được tô viền màu
+            if (index != -1)
+            {
+                chosenObj = index;
+
+            }
+        }
+
+
     }
 }

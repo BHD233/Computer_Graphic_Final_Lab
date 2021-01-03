@@ -1,0 +1,16 @@
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\_18120320_Lab1.SharpGLForm.resources
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\_18120320_Lab1.Properties.Resources.resources
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\18120320-18120479.csproj.GenerateResource.cache
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\18120320-18120479.csproj.CoreCompileInputs.cache
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\18120320-18120479.csprojAssemblyReference.cache
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\18120320-Lab1.exe.config
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\18120320-Lab1.exe
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\18120320-Lab1.pdb
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\ColorHexagon.dll
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\SharpGL.dll
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\SharpGL.SceneGraph.dll
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\SharpGL.WinForms.dll
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\bin\Release\ColorHexagon.pdb
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\18120320-18120479.csproj.CopyComplete
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\18120320-Lab1.exe
+F:\DOAN\NAM3\DHMT\cuoiky\Computer_Graphic_Final_Lab\18120320-18120479\obj\Release\18120320-Lab1.pdb

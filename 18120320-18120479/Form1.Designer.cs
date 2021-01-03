@@ -48,25 +48,9 @@ namespace _18120320_Lab1
             this.lineButton = new System.Windows.Forms.Button();
             this.ngonButton = new System.Windows.Forms.Button();
             this.selectButton = new System.Windows.Forms.Button();
-            this.objectList = new System.Windows.Forms.ListView();
             this.cubeButton = new System.Windows.Forms.Button();
             this.pyramidButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.x = new System.Windows.Forms.Label();
-            this.objName = new System.Windows.Forms.TextBox();
-            this.posXInput = new System.Windows.Forms.TextBox();
-            this.posYInput = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.posZInput = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.RotZInput = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.RotYInput = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.RotXInput = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ScalZInput = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,6 +58,23 @@ namespace _18120320_Lab1
             this.label12 = new System.Windows.Forms.Label();
             this.ScalXInput = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.RotZInput = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.RotYInput = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.RotXInput = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.posZInput = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.posYInput = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.posXInput = new System.Windows.Forms.TextBox();
+            this.objName = new System.Windows.Forms.TextBox();
+            this.x = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.objectList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,17 +84,19 @@ namespace _18120320_Lab1
             this.openGLControl.BackColor = System.Drawing.SystemColors.Window;
             this.openGLControl.DrawFPS = false;
             this.openGLControl.Location = new System.Drawing.Point(283, 12);
+            this.openGLControl.Margin = new System.Windows.Forms.Padding(5);
             this.openGLControl.Name = "openGLControl";
             this.openGLControl.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.openGLControl.RenderContextType = SharpGL.RenderContextType.DIBSection;
             this.openGLControl.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
-            this.openGLControl.Size = new System.Drawing.Size(1234, 943);
+            this.openGLControl.Size = new System.Drawing.Size(1234, 934);
             this.openGLControl.TabIndex = 8;
             this.openGLControl.OpenGLDraw += new SharpGL.RenderEventHandler(this.openGLControl_OpenGLDraw);
             // 
             // colorHexagon
             // 
             this.colorHexagon.Location = new System.Drawing.Point(1, 12);
+            this.colorHexagon.Margin = new System.Windows.Forms.Padding(4);
             this.colorHexagon.Name = "colorHexagon";
             this.colorHexagon.Size = new System.Drawing.Size(276, 328);
             this.colorHexagon.TabIndex = 10;
@@ -117,7 +120,7 @@ namespace _18120320_Lab1
             // 
             this.weightEditText.Location = new System.Drawing.Point(0, 0);
             this.weightEditText.Name = "weightEditText";
-            this.weightEditText.Size = new System.Drawing.Size(100, 20);
+            this.weightEditText.Size = new System.Drawing.Size(100, 22);
             this.weightEditText.TabIndex = 0;
             // 
             // weightEditor
@@ -204,24 +207,12 @@ namespace _18120320_Lab1
             this.selectButton.Size = new System.Drawing.Size(75, 23);
             this.selectButton.TabIndex = 0;
             // 
-            // objectList
-            // 
-            this.objectList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectList.FullRowSelect = true;
-            this.objectList.HideSelection = false;
-            this.objectList.Location = new System.Drawing.Point(1523, 12);
-            this.objectList.Name = "objectList";
-            this.objectList.Size = new System.Drawing.Size(255, 334);
-            this.objectList.TabIndex = 0;
-            this.objectList.TileSize = new System.Drawing.Size(200, 40);
-            this.objectList.UseCompatibleStateImageBehavior = false;
-            this.objectList.View = System.Windows.Forms.View.Tile;
-            // 
             // cubeButton
             // 
-            this.cubeButton.Location = new System.Drawing.Point(26, 371);
+            this.cubeButton.Location = new System.Drawing.Point(35, 457);
+            this.cubeButton.Margin = new System.Windows.Forms.Padding(4);
             this.cubeButton.Name = "cubeButton";
-            this.cubeButton.Size = new System.Drawing.Size(75, 23);
+            this.cubeButton.Size = new System.Drawing.Size(100, 28);
             this.cubeButton.TabIndex = 11;
             this.cubeButton.Text = "CUBE";
             this.cubeButton.UseVisualStyleBackColor = true;
@@ -229,9 +220,10 @@ namespace _18120320_Lab1
             // 
             // pyramidButton
             // 
-            this.pyramidButton.Location = new System.Drawing.Point(26, 428);
+            this.pyramidButton.Location = new System.Drawing.Point(35, 527);
+            this.pyramidButton.Margin = new System.Windows.Forms.Padding(4);
             this.pyramidButton.Name = "pyramidButton";
-            this.pyramidButton.Size = new System.Drawing.Size(75, 23);
+            this.pyramidButton.Size = new System.Drawing.Size(100, 28);
             this.pyramidButton.TabIndex = 12;
             this.pyramidButton.Text = "Pyramid";
             this.pyramidButton.UseVisualStyleBackColor = true;
@@ -263,169 +255,28 @@ namespace _18120320_Lab1
             this.panel1.Controls.Add(this.objName);
             this.panel1.Controls.Add(this.x);
             this.panel1.Location = new System.Drawing.Point(1523, 383);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(255, 212);
             this.panel1.TabIndex = 13;
-            // 
-            // x
-            // 
-            this.x.AutoSize = true;
-            this.x.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x.Location = new System.Drawing.Point(11, 61);
-            this.x.Name = "x";
-            this.x.Size = new System.Drawing.Size(15, 15);
-            this.x.TabIndex = 0;
-            this.x.Text = "X";
-            this.x.UseMnemonic = false;
-            // 
-            // objName
-            // 
-            this.objName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objName.Location = new System.Drawing.Point(3, 7);
-            this.objName.Name = "objName";
-            this.objName.Size = new System.Drawing.Size(100, 21);
-            this.objName.TabIndex = 1;
-            this.objName.Tag = "";
-            this.objName.Text = "Name";
-            // 
-            // posXInput
-            // 
-            this.posXInput.Location = new System.Drawing.Point(32, 60);
-            this.posXInput.Name = "posXInput";
-            this.posXInput.Size = new System.Drawing.Size(46, 20);
-            this.posXInput.TabIndex = 2;
-            this.posXInput.TextChanged += new System.EventHandler(this.posXInput_TextChanged);
-            // 
-            // posYInput
-            // 
-            this.posYInput.Location = new System.Drawing.Point(117, 61);
-            this.posYInput.Name = "posYInput";
-            this.posYInput.Size = new System.Drawing.Size(46, 20);
-            this.posYInput.TabIndex = 4;
-            this.posYInput.TextChanged += new System.EventHandler(this.posYInput_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(96, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Y";
-            this.label3.UseMnemonic = false;
-            // 
-            // posZInput
-            // 
-            this.posZInput.Location = new System.Drawing.Point(203, 62);
-            this.posZInput.Name = "posZInput";
-            this.posZInput.Size = new System.Drawing.Size(46, 20);
-            this.posZInput.TabIndex = 6;
-            this.posZInput.TextChanged += new System.EventHandler(this.posZInput_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(182, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Z";
-            this.label4.UseMnemonic = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Position";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Rotation";
-            // 
-            // RotZInput
-            // 
-            this.RotZInput.Location = new System.Drawing.Point(203, 120);
-            this.RotZInput.Name = "RotZInput";
-            this.RotZInput.Size = new System.Drawing.Size(46, 20);
-            this.RotZInput.TabIndex = 13;
-            this.RotZInput.TextChanged += new System.EventHandler(this.RotZInput_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(182, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(14, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Z";
-            this.label7.UseMnemonic = false;
-            // 
-            // RotYInput
-            // 
-            this.RotYInput.Location = new System.Drawing.Point(117, 119);
-            this.RotYInput.Name = "RotYInput";
-            this.RotYInput.Size = new System.Drawing.Size(46, 20);
-            this.RotYInput.TabIndex = 11;
-            this.RotYInput.TextChanged += new System.EventHandler(this.RotYInput_TextChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(96, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(14, 15);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Y";
-            this.label8.UseMnemonic = false;
-            // 
-            // RotXInput
-            // 
-            this.RotXInput.Location = new System.Drawing.Point(32, 118);
-            this.RotXInput.Name = "RotXInput";
-            this.RotXInput.Size = new System.Drawing.Size(46, 20);
-            this.RotXInput.TabIndex = 9;
-            this.RotXInput.TextChanged += new System.EventHandler(this.RotXInput_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 119);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "X";
-            this.label9.UseMnemonic = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 153);
+            this.label10.Location = new System.Drawing.Point(4, 188);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 16);
+            this.label10.Size = new System.Drawing.Size(49, 20);
             this.label10.TabIndex = 21;
             this.label10.Text = "Scale";
             // 
             // ScalZInput
             // 
-            this.ScalZInput.Location = new System.Drawing.Point(199, 176);
+            this.ScalZInput.Location = new System.Drawing.Point(265, 217);
+            this.ScalZInput.Margin = new System.Windows.Forms.Padding(4);
             this.ScalZInput.Name = "ScalZInput";
-            this.ScalZInput.Size = new System.Drawing.Size(46, 20);
+            this.ScalZInput.Size = new System.Drawing.Size(60, 22);
             this.ScalZInput.TabIndex = 20;
             this.ScalZInput.TextChanged += new System.EventHandler(this.ScalZInput_TextChanged);
             // 
@@ -433,18 +284,20 @@ namespace _18120320_Lab1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(178, 177);
+            this.label11.Location = new System.Drawing.Point(237, 218);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(14, 15);
+            this.label11.Size = new System.Drawing.Size(17, 18);
             this.label11.TabIndex = 19;
             this.label11.Text = "Z";
             this.label11.UseMnemonic = false;
             // 
             // ScalYInput
             // 
-            this.ScalYInput.Location = new System.Drawing.Point(113, 175);
+            this.ScalYInput.Location = new System.Drawing.Point(151, 215);
+            this.ScalYInput.Margin = new System.Windows.Forms.Padding(4);
             this.ScalYInput.Name = "ScalYInput";
-            this.ScalYInput.Size = new System.Drawing.Size(46, 20);
+            this.ScalYInput.Size = new System.Drawing.Size(60, 22);
             this.ScalYInput.TabIndex = 18;
             this.ScalYInput.TextChanged += new System.EventHandler(this.ScalYInput_TextChanged);
             // 
@@ -452,18 +305,20 @@ namespace _18120320_Lab1
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(92, 176);
+            this.label12.Location = new System.Drawing.Point(123, 217);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 15);
+            this.label12.Size = new System.Drawing.Size(17, 18);
             this.label12.TabIndex = 17;
             this.label12.Text = "Y";
             this.label12.UseMnemonic = false;
             // 
             // ScalXInput
             // 
-            this.ScalXInput.Location = new System.Drawing.Point(28, 174);
+            this.ScalXInput.Location = new System.Drawing.Point(37, 214);
+            this.ScalXInput.Margin = new System.Windows.Forms.Padding(4);
             this.ScalXInput.Name = "ScalXInput";
-            this.ScalXInput.Size = new System.Drawing.Size(46, 20);
+            this.ScalXInput.Size = new System.Drawing.Size(60, 22);
             this.ScalXInput.TabIndex = 16;
             this.ScalXInput.TextChanged += new System.EventHandler(this.ScalXInput_TextChanged);
             // 
@@ -471,38 +326,216 @@ namespace _18120320_Lab1
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(7, 175);
+            this.label13.Location = new System.Drawing.Point(9, 215);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(15, 15);
+            this.label13.Size = new System.Drawing.Size(18, 18);
             this.label13.TabIndex = 15;
             this.label13.Text = "X";
             this.label13.UseMnemonic = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 119);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Rotation";
+            // 
+            // RotZInput
+            // 
+            this.RotZInput.Location = new System.Drawing.Point(271, 148);
+            this.RotZInput.Margin = new System.Windows.Forms.Padding(4);
+            this.RotZInput.Name = "RotZInput";
+            this.RotZInput.Size = new System.Drawing.Size(60, 22);
+            this.RotZInput.TabIndex = 13;
+            this.RotZInput.TextChanged += new System.EventHandler(this.RotZInput_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(243, 149);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 18);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Z";
+            this.label7.UseMnemonic = false;
+            // 
+            // RotYInput
+            // 
+            this.RotYInput.Location = new System.Drawing.Point(156, 146);
+            this.RotYInput.Margin = new System.Windows.Forms.Padding(4);
+            this.RotYInput.Name = "RotYInput";
+            this.RotYInput.Size = new System.Drawing.Size(60, 22);
+            this.RotYInput.TabIndex = 11;
+            this.RotYInput.TextChanged += new System.EventHandler(this.RotYInput_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(128, 148);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(17, 18);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Y";
+            this.label8.UseMnemonic = false;
+            // 
+            // RotXInput
+            // 
+            this.RotXInput.Location = new System.Drawing.Point(43, 145);
+            this.RotXInput.Margin = new System.Windows.Forms.Padding(4);
+            this.RotXInput.Name = "RotXInput";
+            this.RotXInput.Size = new System.Drawing.Size(60, 22);
+            this.RotXInput.TabIndex = 9;
+            this.RotXInput.TextChanged += new System.EventHandler(this.RotXInput_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(15, 146);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 18);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "X";
+            this.label9.UseMnemonic = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 48);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Position";
+            // 
+            // posZInput
+            // 
+            this.posZInput.Location = new System.Drawing.Point(271, 76);
+            this.posZInput.Margin = new System.Windows.Forms.Padding(4);
+            this.posZInput.Name = "posZInput";
+            this.posZInput.Size = new System.Drawing.Size(60, 22);
+            this.posZInput.TabIndex = 6;
+            this.posZInput.TextChanged += new System.EventHandler(this.posZInput_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(243, 78);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 18);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Z";
+            this.label4.UseMnemonic = false;
+            // 
+            // posYInput
+            // 
+            this.posYInput.Location = new System.Drawing.Point(156, 75);
+            this.posYInput.Margin = new System.Windows.Forms.Padding(4);
+            this.posYInput.Name = "posYInput";
+            this.posYInput.Size = new System.Drawing.Size(60, 22);
+            this.posYInput.TabIndex = 4;
+            this.posYInput.TextChanged += new System.EventHandler(this.posYInput_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(128, 76);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Y";
+            this.label3.UseMnemonic = false;
+            // 
+            // posXInput
+            // 
+            this.posXInput.Location = new System.Drawing.Point(43, 74);
+            this.posXInput.Margin = new System.Windows.Forms.Padding(4);
+            this.posXInput.Name = "posXInput";
+            this.posXInput.Size = new System.Drawing.Size(60, 22);
+            this.posXInput.TabIndex = 2;
+            this.posXInput.TextChanged += new System.EventHandler(this.posXInput_TextChanged);
+            // 
+            // objName
+            // 
+            this.objName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objName.Location = new System.Drawing.Point(4, 9);
+            this.objName.Margin = new System.Windows.Forms.Padding(4);
+            this.objName.Name = "objName";
+            this.objName.Size = new System.Drawing.Size(132, 24);
+            this.objName.TabIndex = 1;
+            this.objName.Tag = "";
+            this.objName.Text = "Name";
+            // 
+            // x
+            // 
+            this.x.AutoSize = true;
+            this.x.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.x.Location = new System.Drawing.Point(15, 75);
+            this.x.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.x.Name = "x";
+            this.x.Size = new System.Drawing.Size(18, 18);
+            this.x.TabIndex = 0;
+            this.x.Text = "X";
+            this.x.UseMnemonic = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(35, 588);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Prism";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.prismButton_Click);
+            // 
+            // objectList
+            // 
+            this.objectList.FormattingEnabled = true;
+            this.objectList.ItemHeight = 16;
+            this.objectList.Location = new System.Drawing.Point(1523, 12);
+            this.objectList.Name = "objectList";
+            this.objectList.Size = new System.Drawing.Size(254, 340);
+            this.objectList.TabIndex = 22;
+            this.objectList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.objectListClick);
+            // 
             // SharpGLForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1784, 961);
+            this.ClientSize = new System.Drawing.Size(1782, 953);
+            this.Controls.Add(this.objectList);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.pyramidButton);
             this.Controls.Add(this.cubeButton);
-            this.Controls.Add(this.objectList);
             this.Controls.Add(this.colorHexagon);
             this.Controls.Add(this.openGLControl);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1800, 1000);
             this.Name = "SharpGLForm";
             this.Text = "18120320-Bui_Huu_Duc";
-            this.Load += new System.EventHandler(this.ShapGLForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
-        }
-
-        private void ShapGLForm_Load(object sender, EventArgs e)
-        {
         }
 
         #endregion
@@ -524,7 +557,6 @@ namespace _18120320_Lab1
         private System.Windows.Forms.Button paintButton;
         private System.Windows.Forms.Button ngonButton;
         private System.Windows.Forms.Button selectButton;
-        private System.Windows.Forms.ListView objectList;
         private System.Windows.Forms.Button cubeButton;
         private System.Windows.Forms.Button pyramidButton;
         private System.Windows.Forms.Panel panel1;
@@ -550,6 +582,8 @@ namespace _18120320_Lab1
         private System.Windows.Forms.TextBox posYInput;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox posXInput;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox objectList;
     }
 }
 
