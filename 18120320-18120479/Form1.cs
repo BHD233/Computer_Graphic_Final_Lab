@@ -1,36 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using _18120320_Lab1.Properties;
 using SharpGL;
-
+using SharpGL.SceneGraph;
 using SharpGL.SceneGraph.Assets;
 using SharpGL.SceneGraph.Lighting;
-using SharpGL.SceneGraph;
-using _18120320_Lab1.Properties;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace _18120320_Lab1
 {
-    public partial class SharpGLForm : Form
+    public partial class SharpGLForm: Form
     {
         //list of all object to draw
         List<Object> drawObjs = new List<Object>();
         List<String> objNames = new List<String>();
         Color color = Color.Black;
-
+        int chosenObj = 0;
         //================new
+<<<<<<< HEAD
 
 
         int chosenObj = 0;
 
 
+=======
+>>>>>>> 204833f4ac3574612271fbe00cefa55b1158bb18
         float rtri = 0;
+
 
         //  The texture identifier.
         Texture texture = new Texture();
@@ -84,6 +81,7 @@ namespace _18120320_Lab1
                 i++;
 
             }
+            rtri += 1.0f;// 0.2f;	
 
         }
 
@@ -91,7 +89,12 @@ namespace _18120320_Lab1
         {
             //change color base on what user chose
             color = colorHexagon.SelectedColor;
+<<<<<<< HEAD
 drawObjs[chosenObj].ObjColor = color;
+=======
+            drawObjs[chosenObj].ObjColor = color;
+
+>>>>>>> 204833f4ac3574612271fbe00cefa55b1158bb18
         }
 
         private void cubeButton_Click(object sender, EventArgs e)
@@ -99,6 +102,40 @@ drawObjs[chosenObj].ObjColor = color;
             drawObjs.Add(new Cube());
             objNames.Add("cube" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+
+
+            listObjects.Items.Add("cube" + objNames.Count.ToString());
+            
+        }
+
+        private void prismButton_Click(object sender, EventArgs e)
+        {
+            drawObjs.Add(new Prism());
+            objNames.Add("prism" + objNames.Count.ToString());
+            objectList.Items.Add(objNames[objNames.Count - 1]);
+
+            listObjects.Items.Add("prism" + objNames.Count.ToString());
+
+            //foreach (var i in listObjects.Items)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+        }
+
+        private void listObjectsClick(object sender, MouseEventArgs e)
+        {
+            // Get vị trí click chuột
+            int index = this.listObjects.IndexFromPoint(e.Location);
+            Console.WriteLine(index);
+
+            //nếu chuột nằm trên item có vị trí index thì drawObject[index] được tô viền màu
+            if (index != -1)
+            {
+                //drawObjs[index].OutlineColor = Color.Orange;
+                chosenObj = index;
+                
+            }
         }
 
         private void pyramidButton_Click(object sender, EventArgs e)
