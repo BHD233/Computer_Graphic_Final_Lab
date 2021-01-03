@@ -23,7 +23,7 @@ namespace _18120320_Lab1
         List<Object> drawObjs = new List<Object>();
         List<String> objNames = new List<String>();
         Color color = Color.Black;
-
+        Background background = new Background();
         //================new
 
 
@@ -64,9 +64,24 @@ namespace _18120320_Lab1
 
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
-            gl.Translate(0.0f, 0.0f, -6.0f);
-            gl.Rotate(rtri, rtri, 0.0f);
-            rtri += 1.0f;
+
+            gl.Translate(0.0f, 0.0f, -6f);
+
+
+            gl.LookAt(
+                5, 5, 5,
+                0, 0, 0,
+                0, 1, 0);
+
+
+
+
+            //gl.Rotate(rtri, rtri, 0.0f);
+            //gl.Rotate(rtri, 0.0f, 1.0f, 0.0f);
+
+            //background 
+            background.Draw(gl);
+            rtri += 3.0f;
 
             int i = 0;
             foreach (Object obj in drawObjs)
@@ -175,6 +190,36 @@ namespace _18120320_Lab1
             }
         }
 
+        private void openGLControl_Resized(object sender, EventArgs e)
+        {
+            OpenGL gl = openGLControl.OpenGL;
 
+            //set ma tran viewport
+            gl.Viewport(
+                0, 0,
+                openGLControl.Width,
+                openGLControl.Height);
+
+            //set ma tran phep chieu
+            gl.MatrixMode(OpenGL.GL_PROJECTION);
+            gl.Perspective(60,
+            openGLControl.Width / openGLControl.Height,
+                1.0, 20.0);
+
+            //set ma tran model view
+            gl.MatrixMode(OpenGL.GL_MODELVIEW);
+            gl.LookAt(
+                5, 5, 50,
+                0, 0, 0,
+                0, 1, 0);
+        }
+
+
+        private void openGLControl_OpenGLInitialized(object sender, EventArgs e)
+        {
+            OpenGL gl = openGLControl.OpenGL;
+
+            gl.ClearColor(0, 0, 0, 0);
+        }
     }
 }

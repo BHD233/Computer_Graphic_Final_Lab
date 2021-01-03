@@ -35,9 +35,9 @@ namespace _18120320_Lab1
     class Object
     {
         CustomPoint center;
-        double scaleX = 1;
-        double scaleY = 1;
-        double scaleZ = 1;
+        double scaleX = 0.5;
+        double scaleY = 0.5;
+        double scaleZ = 0.5;
 
         double rotateX = 0;
         double rotateY = 0;
