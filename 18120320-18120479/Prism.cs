@@ -21,15 +21,12 @@ namespace _18120320_Lab1
         }
         public override void Draw(OpenGL gl)
         {
+            gl.Rotate(-RotateX, -RotateY, -RotateZ);
+
             R_bot = Math.Sqrt(3) * _length / 3;
 
             //set drawing color
             gl.Color(ObjColor.R / 255.0, ObjColor.G / 255.0, ObjColor.B / 255.0);
-
-
-            float x = (float)(Center.X - ScaleX);
-            float y = (float)(Center.Y - ScaleY);
-            float z = (float)(Center.Z - ScaleZ);
 
             //3 diem dau la mot tam giac
             CustomPoint V1 = new CustomPoint(Center.X + R_bot, Center.Y - _height / 2, Center.Z);
@@ -105,10 +102,11 @@ namespace _18120320_Lab1
             gl.Vertex(V6.X, V6.Y, V6.Z); // V6
             gl.Vertex(V5.X, V5.Y, V5.Z); // V5
 
-
             gl.End();
 
             gl.Flush();
+
+            gl.Rotate(-RotateX, -RotateY, -RotateZ);
         }
     }
 }

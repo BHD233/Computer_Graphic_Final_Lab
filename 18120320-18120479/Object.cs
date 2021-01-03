@@ -35,13 +35,15 @@ namespace _18120320_Lab1
     class Object
     {
         CustomPoint center;
+
         double scaleX = 1;
         double scaleY = 1;
         double scaleZ = 1;
 
-        double rotateX = 0;
-        double rotateY = 0;
-        double rotateZ = 0;
+        float rotateX = 0;
+        float rotateY = 0;
+        float rotateZ = 0;
+
         Color objColor = Color.White;
 
         bool isChosen = false;
@@ -53,6 +55,15 @@ namespace _18120320_Lab1
         public virtual void Draw(OpenGL gl) 
         {
             
+        }
+
+        public void ResetOutlineColor()
+        {
+            outlineColor = Color.Gray;
+            if (objColor == outlineColor)
+            {
+                outlineColor = Color.White;
+            }
         }
 
         public CustomPoint Center
@@ -99,7 +110,7 @@ namespace _18120320_Lab1
                 return scaleZ;
             }
         }
-        public double RotateX
+        public float RotateX
         {
             set
             {
@@ -110,7 +121,7 @@ namespace _18120320_Lab1
                 return rotateX;
             }
         }
-        public double RotateY
+        public float RotateY
         {
             set
             {
@@ -121,7 +132,7 @@ namespace _18120320_Lab1
                 return rotateY;
             }
         }
-        public double RotateZ
+        public float RotateZ
         {
             set
             {

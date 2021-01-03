@@ -24,13 +24,13 @@ namespace _18120320_Lab1
         List<String> objNames = new List<String>();
         Color color = Color.Black;
 
-        //================new
+        int chosenObj = -1;
 
+        float rX = 0, rY = 0, rZ = 0;
+        float zoom = 0;
 
-        int chosenObj = 0;
+        Camera camera = new Camera();
 
-
-        float rtri = 0;
 
         //  The texture identifier.
         Texture texture = new Texture();
@@ -39,7 +39,7 @@ namespace _18120320_Lab1
         {
             InitializeComponent();
             //  Get the OpenGL object, for quick access.
-            SharpGL.OpenGL gl = this.openGLControl.OpenGL;
+            OpenGL gl = this.openGLControl.OpenGL;
 
             //  A bit of extra initialisation here, we have to enable textures.
             gl.Enable(OpenGL.GL_TEXTURE_2D);
@@ -60,29 +60,16 @@ namespace _18120320_Lab1
         private void openGLControl_OpenGLDraw(object sender, RenderEventArgs args)
         {
             //  Get the OpenGL object, for quick access.
-            SharpGL.OpenGL gl = this.openGLControl.OpenGL;
+            OpenGL gl = this.openGLControl.OpenGL;
 
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
-            gl.Translate(0.0f, 0.0f, -6.0f);
-            gl.Rotate(rtri, rtri, 0.0f);
-            rtri += 1.0f;
 
-            int i = 0;
+            camera.Execute(gl);
+
             foreach (Object obj in drawObjs)
             {
                 obj.Draw(gl);
-
-                if (i == chosenObj)
-                {
-                    obj.OutlineColor = Color.Orange;
-                }
-                else
-                {
-                    obj.OutlineColor = Color.Gray;
-                }
-                i++;
-
             }
 
         }
@@ -99,6 +86,9 @@ namespace _18120320_Lab1
             drawObjs.Add(new Cube());
             objNames.Add("cube" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+
+            chosenObj = drawObjs.Count - 1;
+            ChooseObj();
         }
 
         private void pyramidButton_Click(object sender, EventArgs e)
@@ -106,6 +96,9 @@ namespace _18120320_Lab1
             drawObjs.Add(new Pyramid());
             objNames.Add("pyramid" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+
+            chosenObj = drawObjs.Count - 1;
+            ChooseObj();
         }
 
         private void prismButton_Click(object sender, EventArgs e)
@@ -113,53 +106,151 @@ namespace _18120320_Lab1
             drawObjs.Add(new Prism());
             objNames.Add("prism" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
+
+            chosenObj = drawObjs.Count - 1;
+            ChooseObj();
         }
 
         private void posXInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].Center.X = double.Parse(posXInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void posYInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].Center.Y = double.Parse(posYInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void posZInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].Center.Z = double.Parse(posZInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void RotXInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].RotateX = float.Parse(rotXInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void RotYInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].RotateY = float.Parse(rotYInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void RotZInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].RotateZ = float.Parse(rotZInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void ScalXInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].ScaleX = double.Parse(scalXInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void ScalYInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].ScaleY = double.Parse(scalYInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
         private void ScalZInput_TextChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                drawObjs[chosenObj].ScaleZ = double.Parse(scalZInput.Text.ToString());
+            }
+            catch
+            {
+                //not double
+            }
         }
 
+        private void ChooseObj()
+        {
+            //change outline color
+            foreach (Object obj in drawObjs)
+            {
+                obj.ResetOutlineColor();
+            }
+
+            drawObjs[chosenObj].OutlineColor = Color.Orange;
+
+            //show panel
+            panel1.Visible = true;
+
+            //update name text of main field
+            //name
+            objNameInput.Text = objNames[chosenObj];
+
+            //pos
+            posXInput.Text = drawObjs[chosenObj].Center.X.ToString();
+            posYInput.Text = drawObjs[chosenObj].Center.Y.ToString();
+            posZInput.Text = drawObjs[chosenObj].Center.Z.ToString();
+
+            //rotate
+            rotXInput.Text = drawObjs[chosenObj].RotateX.ToString();
+            rotYInput.Text = drawObjs[chosenObj].RotateY.ToString();
+            rotZInput.Text = drawObjs[chosenObj].RotateZ.ToString();
+
+            //scale
+            scalXInput.Text = drawObjs[chosenObj].ScaleX.ToString();
+            scalYInput.Text = drawObjs[chosenObj].ScaleY.ToString();
+            scalZInput.Text = drawObjs[chosenObj].ScaleZ.ToString();
+        }
 
         private void objectListClick(object sender, MouseEventArgs e)
         {
@@ -172,9 +263,68 @@ namespace _18120320_Lab1
             {
                 chosenObj = index;
 
+                ChooseObj();
             }
         }
 
+        private void objName_TextChanged(object sender, EventArgs e)
+        {
+            objNames[chosenObj] = objNameInput.Text;
+            objectList.Items[chosenObj] = objNameInput.Text;
+        }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Up)
+            {
+                rX++;
+            }
+            if (keyData == Keys.Down)
+            {
+                rX--;
+            }
+            if (keyData == Keys.Left)
+            {
+                rY++;
+            }
+            if (keyData == Keys.Right)
+            {
+                rY--;
+            }
+
+            camera.RX = rX;
+            camera.RY = rY;
+            camera.RZ = rZ;
+
+            return true;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (chosenObj >= 0 && chosenObj < drawObjs.Count)
+            {
+                drawObjs.RemoveAt(chosenObj);
+                objNames.RemoveAt(chosenObj);
+                objectList.Items.RemoveAt(chosenObj);
+
+                chosenObj = -1;
+
+                panel1.Visible = false;
+            }
+        }
+
+        private void openGLControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Z)
+            {
+                zoom++;
+            }
+            if (e.KeyData == Keys.X)
+            {
+                zoom--;
+            }
+
+            camera.ZoomValue = zoom;
+        }
     }
 }
