@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using _18120320_Lab1.Properties;
 using SharpGL;
-
+using SharpGL.SceneGraph;
 using SharpGL.SceneGraph.Assets;
 using SharpGL.SceneGraph.Lighting;
-using SharpGL.SceneGraph;
-using _18120320_Lab1.Properties;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace _18120320_Lab1
 {
@@ -65,14 +58,32 @@ namespace _18120320_Lab1
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
 
+            gl.LookAt(
+                5, 5, 5,
+                0, 0, 0,
+                0, 1, 0);
+
+
             //background 
             background.Draw(gl);
 
-            camera.Execute(gl);
+            //camera.Execute(gl);
 
+            int i = 0;
             foreach (Object obj in drawObjs)
             {
                 obj.Draw(gl);
+
+                if (i == chosenObj)
+                {
+                    obj.OutlineColor = Color.Orange;
+                }
+                else
+                {
+                    obj.OutlineColor = Color.Gray;
+                }
+                i++;
+
             }
 
         }
@@ -91,6 +102,10 @@ namespace _18120320_Lab1
             objectList.Items.Add(objNames[objNames.Count - 1]);
 
             chosenObj = drawObjs.Count - 1;
+
+            //highlight new object in objectList
+            objectList.SetSelected(chosenObj, true);
+
             ChooseObj();
         }
 
@@ -99,8 +114,11 @@ namespace _18120320_Lab1
             drawObjs.Add(new Pyramid());
             objNames.Add("pyramid" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
-
+            
             chosenObj = drawObjs.Count - 1;
+
+            //highlight new object in objectList
+            objectList.SetSelected(chosenObj, true);
             ChooseObj();
         }
 
@@ -111,6 +129,10 @@ namespace _18120320_Lab1
             objectList.Items.Add(objNames[objNames.Count - 1]);
 
             chosenObj = drawObjs.Count - 1;
+
+            //highlight new object in objectList
+            objectList.SetSelected(chosenObj, true);
+
             ChooseObj();
         }
 
