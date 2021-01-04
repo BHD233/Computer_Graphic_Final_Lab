@@ -11,7 +11,7 @@ namespace _18120320_Lab1
 {
     class Prism : Object
     {
-        float _length = 2.0f / 3; //độ dài cạnh cua mat day tam giac
+        float _length = 1f; //độ dài cạnh cua mat day tam giac
         float _height = 1.0f; // chieu cao cua lang tru
         double alpha = 2 * Math.PI / 3;
         double R_bot;

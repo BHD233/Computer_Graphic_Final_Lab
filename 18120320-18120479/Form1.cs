@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using _18120320_Lab1.Properties;
 using SharpGL;
-
+using SharpGL.SceneGraph;
 using SharpGL.SceneGraph.Assets;
 using SharpGL.SceneGraph.Lighting;
-using SharpGL.SceneGraph;
-using _18120320_Lab1.Properties;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace _18120320_Lab1
 {
@@ -32,8 +26,7 @@ namespace _18120320_Lab1
         Camera camera = new Camera();
 
 
-        //  The texture identifier.
-        Texture texture = new Texture();
+
 
         public SharpGLForm()
         {
@@ -44,8 +37,7 @@ namespace _18120320_Lab1
             //  A bit of extra initialisation here, we have to enable textures.
             gl.Enable(OpenGL.GL_TEXTURE_2D);
 
-            //  Create our texture object from a file. This creates the texture for OpenGL.
-            //texture.Create(gl, "Crate.bmp");
+
 
             //  Create a light.
             Light light = new Light()
@@ -54,6 +46,7 @@ namespace _18120320_Lab1
                 Position = new Vertex(3, 10, 3),
                 GLCode = OpenGL.GL_LIGHT1
             };
+
         }
 
 
@@ -62,19 +55,34 @@ namespace _18120320_Lab1
             //  Get the OpenGL object, for quick access.
             OpenGL gl = this.openGLControl.OpenGL;
 
+            //  Bind the texture.
+            //texture.Bind(gl);
+
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
 
 
             camera.Execute(gl);
 
+
             //background 
             background.Draw(gl);
 
-
+            int i = 0;
             foreach (Object obj in drawObjs)
             {
                 obj.Draw(gl);
+
+                if (i == chosenObj)
+                {
+                    obj.OutlineColor = Color.Orange;
+                }
+                else
+                {
+                    obj.OutlineColor = Color.Gray;
+                }
+                i++;
+
             }
 
         }
@@ -93,6 +101,10 @@ namespace _18120320_Lab1
             objectList.Items.Add(objNames[objNames.Count - 1]);
 
             chosenObj = drawObjs.Count - 1;
+
+            //highlight new object in objectList
+            objectList.SetSelected(chosenObj, true);
+
             ChooseObj();
         }
 
@@ -101,8 +113,11 @@ namespace _18120320_Lab1
             drawObjs.Add(new Pyramid());
             objNames.Add("pyramid" + objNames.Count.ToString());
             objectList.Items.Add(objNames[objNames.Count - 1]);
-
+            
             chosenObj = drawObjs.Count - 1;
+
+            //highlight new object in objectList
+            objectList.SetSelected(chosenObj, true);
             ChooseObj();
         }
 
@@ -113,6 +128,10 @@ namespace _18120320_Lab1
             objectList.Items.Add(objNames[objNames.Count - 1]);
 
             chosenObj = drawObjs.Count - 1;
+
+            //highlight new object in objectList
+            objectList.SetSelected(chosenObj, true);
+
             ChooseObj();
         }
 
@@ -312,6 +331,26 @@ namespace _18120320_Lab1
 
 
             return true;
+        }
+
+        private void textureSelect_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "texture|*.BMP;*.JPG;*.PNG|All files (*.*)|*.*";
+            // dialog.InitialDirectory = @"C:\";
+
+            dialog.InitialDirectory = Directory.GetCurrentDirectory();
+
+            dialog.Title = "Please select a texture.";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = dialog.FileName.ToString();
+                Texture texture = new Texture();
+                texture.Create(openGLControl.OpenGL, filePath);
+                //set texture
+                drawObjs[chosenObj].Texture = texture;
+            }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
