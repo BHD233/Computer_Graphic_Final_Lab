@@ -23,8 +23,8 @@ namespace _18120320_Lab1
         List<Object> drawObjs = new List<Object>();
         List<String> objNames = new List<String>();
         Color color = Color.Black;
-
         int chosenObj = -1;
+        Background background = new Background();
 
         float rX = 0, rY = 0, rZ = 0;
         float zoom = 0;
@@ -64,6 +64,9 @@ namespace _18120320_Lab1
 
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
+
+            //background 
+            background.Draw(gl);
 
             camera.Execute(gl);
 
