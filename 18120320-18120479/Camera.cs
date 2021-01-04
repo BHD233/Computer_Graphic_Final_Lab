@@ -15,75 +15,100 @@ namespace _18120320_Lab1
 {
     class Camera
     {
+        double eyeX, eyeY, eyeZ;
+        double lookX, lookY, lookZ;
+        double radius;
+        double theta;
+        double phi;
+
         public void Execute(OpenGL gl)
         {
-            Zoom(gl, zoomValue);
-            Rotate(gl, rX, rY, rZ);
+            gl.LookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, 0, 1 * Math.Cos(phi), 0);
         }
 
-        public float ZoomValue
+        public void ZoomIn()
         {
-            set
-            {
-                zoomValue = value;
-            }
-            get
-            {
-                return zoomValue;
-            }
-        }
-        public float RX
-        {
-            set
-            {
-                rX = value;
-            }
-            get
-            {
-                return rX;
-            }
-        }
-        public float RY
-        {
-            set
-            {
-                rY = value;
-            }
-            get
-            {
-                return rY;
-            }
-        }
-        public float RZ
-        {
-            set
-            {
-                rZ = value;
-            }
-            get
-            {
-                return rZ;
-            }
+            eyeX += -0.02 * eyeX;
+            eyeY += -0.02 * eyeY;
+            eyeZ += -0.02 * eyeZ;
+
+            CalculateRadius();
+            CalculateTheta();
+            CalculatePhi();
         }
 
-        float zoomValue, rX, rY, rZ;
-
-        private void Zoom(OpenGL gl, float zoomValue)
+        public void ZoomOut()
         {
-            gl.Translate(0.0f, 0.0f, -(20.0f - zoomValue));
+            eyeX += 0.02 * eyeX;
+            eyeY += 0.02 * eyeY;
+            eyeZ += 0.02 * eyeZ;
+
+            CalculateRadius();
+            CalculateTheta();
+            CalculatePhi();
         }
 
-        private void Rotate(OpenGL gl, float rX, float rY, float rZ)
+        public void RotateRight()
         {
-            gl.Rotate(rX, rY, rZ);
+            theta += 0.02;
+            eyeX = lookX + radius * Math.Cos(phi) * Math.Sin(theta);
+            eyeZ = lookZ + radius * Math.Cos(phi) * Math.Cos(theta);
+        }
+
+        public void RotateLeft()
+        {
+            theta -= 0.02;
+            eyeX = lookX + radius * Math.Cos(phi) * Math.Sin(theta);
+            eyeZ = lookZ + radius * Math.Cos(phi) * Math.Cos(theta);
+        }
+
+        public void RotateUp()
+        {
+            phi += 0.02;
+            eyeY = lookY + radius * Math.Sin(phi);
+            eyeZ = lookZ + radius * Math.Cos(phi) * Math.Cos(theta);
+            eyeX = lookX + radius * Math.Cos(phi) * Math.Sin(theta);
+        }
+
+        public void RotateDown()
+        {
+            phi -= 0.02;
+
+            eyeY = lookY + radius * Math.Sin(phi);
+            eyeZ = lookZ + radius * Math.Cos(phi) * Math.Cos(theta);
+            eyeX = lookX + radius * Math.Cos(phi) * Math.Sin(theta);
         }
 
         public Camera()
         {
-            zoomValue = 0f;
-            rX = 0f;
-            rY = 0f;
-            rZ = 0f;
+            eyeX = 20;
+            eyeY = 5;
+            eyeZ = 20;
+            lookX = 0;
+            lookY = 0;
+            lookZ = 0;
+
+            CalculateRadius();
+            CalculateTheta();
+            CalculatePhi();
+        }
+
+        private void CalculateTheta()
+        {
+            theta = Math.Atan((eyeX - lookX) / (eyeZ - lookZ));
+        }
+
+        private void CalculatePhi()
+        {
+            phi = Math.Asin((eyeY - lookY) / radius);
+        }
+
+        //Calculate radius from eye to look
+        private void CalculateRadius()
+        {
+            radius = Math.Sqrt(Math.Pow(eyeX - lookX, 2)
+                     + Math.Pow(eyeY - lookY, 2)
+                     + Math.Pow(eyeZ - lookZ, 2));
         }
     }
 }

@@ -28,6 +28,7 @@ namespace _18120320_Lab1
 
             gl.Color(1f, 0, 0, 0); // Chọn màu Red
             gl.Vertex(0, 0, -size); gl.Vertex(0, 0, size);
+
             gl.End();
 
             //Vẽ lưới tọa độ
