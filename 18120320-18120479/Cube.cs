@@ -14,6 +14,11 @@ namespace _18120320_Lab1.Properties
         {
             gl.Rotate(RotateX, RotateY, RotateZ);
 
+            gl.Enable(OpenGL.GL_TEXTURE_2D);
+
+            //Bind the texture.
+            Texture.Bind(gl);
+
             //set drawing color
             gl.Color(ObjColor.R / 255.0, ObjColor.G / 255.0, ObjColor.B / 255.0);
 
@@ -109,6 +114,8 @@ namespace _18120320_Lab1.Properties
             gl.Vertex(x1, y1, z1);
 
             gl.End();
+
+            gl.Disable(OpenGL.GL_TEXTURE_2D);
 
             gl.Flush();
 

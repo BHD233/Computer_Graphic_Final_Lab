@@ -16,6 +16,11 @@ namespace _18120320_Lab1
             //set drawing color
             gl.Color(ObjColor.R / 255.0, ObjColor.G / 255.0, ObjColor.B / 255.0);
 
+            gl.Enable(OpenGL.GL_TEXTURE_2D);
+
+            //Bind the texture.
+            Texture.Bind(gl);
+
             gl.Begin(OpenGL.GL_QUADS);
 
             // Front Face
@@ -77,6 +82,8 @@ namespace _18120320_Lab1
             gl.Vertex(x1, y1, z2);
 
             gl.End();
+
+            gl.Disable(OpenGL.GL_TEXTURE_2D);
 
             gl.Flush();
 

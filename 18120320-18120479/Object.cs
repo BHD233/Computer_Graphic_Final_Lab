@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpGL.SceneGraph.Assets;
 
 namespace _18120320_Lab1
 {
@@ -53,11 +54,27 @@ namespace _18120320_Lab1
         float outlineWeight = 1f;
         Color outlineColor = Color.White;
 
+
+        Texture texture = new Texture();
+
         //drawing function using method
         public virtual void Draw(OpenGL gl) 
         {
             
         }
+
+        public Texture Texture
+        {
+            set
+            {
+                texture = value;
+            }
+            get
+            {
+                return texture;
+            }
+        }
+
 
         public void ResetOutlineColor()
         {
