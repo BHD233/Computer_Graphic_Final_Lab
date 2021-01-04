@@ -35,13 +35,17 @@ namespace _18120320_Lab1
     class Object
     {
         CustomPoint center;
-        double scaleX = 0.5;
-        double scaleY = 0.5;
-        double scaleZ = 0.5;
 
-        double rotateX = 0;
-        double rotateY = 0;
-        double rotateZ = 0;
+        public double scaleX = 1;
+        double scaleY = 1;
+        public double scaleZ = 1;
+
+        float rotateX = 0;
+        float rotateY = 0;
+        float rotateZ = 0;
+
+        int type;
+
         Color objColor = Color.White;
 
         bool isChosen = false;
@@ -55,6 +59,26 @@ namespace _18120320_Lab1
             
         }
 
+        public void ResetOutlineColor()
+        {
+            outlineColor = Color.Gray;
+            if (objColor == outlineColor)
+            {
+                outlineColor = Color.White;
+            }
+        }
+
+        public int Type
+        {
+            set
+            {
+                type = value;
+            }
+            get
+            {
+                return type;
+            }
+        }
         public CustomPoint Center
         {
             set
@@ -66,7 +90,7 @@ namespace _18120320_Lab1
                 return center;
             }
         }
-        public double ScaleX
+        virtual public double ScaleX
         {
             set
             {
@@ -88,7 +112,7 @@ namespace _18120320_Lab1
                 return scaleY;
             }
         }
-        public double ScaleZ
+        virtual public double ScaleZ
         {
             set
             {
@@ -99,7 +123,7 @@ namespace _18120320_Lab1
                 return scaleZ;
             }
         }
-        public double RotateX
+        public float RotateX
         {
             set
             {
@@ -110,7 +134,7 @@ namespace _18120320_Lab1
                 return rotateX;
             }
         }
-        public double RotateY
+        public float RotateY
         {
             set
             {
@@ -121,7 +145,7 @@ namespace _18120320_Lab1
                 return rotateY;
             }
         }
-        public double RotateZ
+        public float RotateZ
         {
             set
             {
