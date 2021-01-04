@@ -28,7 +28,10 @@ namespace _18120320_Lab1
 
             gl.Color(0f, 0, 1f, 0); // Chọn màu Blue
             gl.Vertex(0, 0, -size); gl.Vertex(0, 0, size);
+
             gl.End();
+
+            gl.Flush();
 
             ////Vẽ lưới tọa độ
             //gl.LineWidth(1);

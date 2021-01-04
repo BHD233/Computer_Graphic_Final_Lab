@@ -92,7 +92,6 @@ namespace _18120320_Lab1
             this.openGLControl.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
             this.openGLControl.Size = new System.Drawing.Size(926, 759);
             this.openGLControl.TabIndex = 8;
-            this.openGLControl.OpenGLInitialized += new System.EventHandler(this.openGLControl_OpenGLInitialized);
             this.openGLControl.OpenGLDraw += new SharpGL.RenderEventHandler(this.openGLControl_OpenGLDraw);
             this.openGLControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.openGLControl_KeyDown);
             // 

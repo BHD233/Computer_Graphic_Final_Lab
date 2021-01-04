@@ -65,10 +65,12 @@ namespace _18120320_Lab1
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.LoadIdentity();
 
+
+            camera.Execute(gl);
+
             //background 
             background.Draw(gl);
 
-            camera.Execute(gl);
 
             foreach (Object obj in drawObjs)
             {
@@ -285,27 +287,29 @@ namespace _18120320_Lab1
             if (keyData == Keys.Up)
             {
                 rX++;
+                camera.RotateUp();
             }
             else if (keyData == Keys.Down)
             {
                 rX--;
+                camera.RotateDown();
             }
             else if (keyData == Keys.Left)
             {
                 rY--;
+                camera.RotateLeft();
             }
             else if (keyData == Keys.Right)
             {
                 rY++;
+                camera.RotateRight();
             }
             else
             {
                 return base.ProcessCmdKey(ref msg, keyData);
             }
 
-            camera.RX = rX;
-            camera.RY = rY;
-            camera.RZ = rZ;
+
 
             return true;
         }
@@ -335,7 +339,6 @@ namespace _18120320_Lab1
                 zoom--;
             }
 
-            camera.ZoomValue = zoom;
         }
     }
 }
