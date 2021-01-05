@@ -77,8 +77,10 @@ namespace _18120320_Lab1
             this.objectList = new System.Windows.Forms.ListBox();
             this.deleteButton = new System.Windows.Forms.Button();
             this.selecttexture = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // openGLControl
@@ -86,7 +88,7 @@ namespace _18120320_Lab1
             this.openGLControl.BackColor = System.Drawing.SystemColors.Window;
             this.openGLControl.DrawFPS = false;
             this.openGLControl.Location = new System.Drawing.Point(283, 12);
-            this.openGLControl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.openGLControl.Margin = new System.Windows.Forms.Padding(5);
             this.openGLControl.Name = "openGLControl";
             this.openGLControl.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
             this.openGLControl.RenderContextType = SharpGL.RenderContextType.DIBSection;
@@ -99,7 +101,7 @@ namespace _18120320_Lab1
             // colorHexagon
             // 
             this.colorHexagon.Location = new System.Drawing.Point(1, 12);
-            this.colorHexagon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorHexagon.Margin = new System.Windows.Forms.Padding(4);
             this.colorHexagon.Name = "colorHexagon";
             this.colorHexagon.Size = new System.Drawing.Size(276, 327);
             this.colorHexagon.TabIndex = 10;
@@ -212,19 +214,19 @@ namespace _18120320_Lab1
             // 
             // cubeButton
             // 
-            this.cubeButton.Location = new System.Drawing.Point(35, 500);
-            this.cubeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cubeButton.Location = new System.Drawing.Point(95, 419);
+            this.cubeButton.Margin = new System.Windows.Forms.Padding(4);
             this.cubeButton.Name = "cubeButton";
             this.cubeButton.Size = new System.Drawing.Size(100, 28);
             this.cubeButton.TabIndex = 11;
-            this.cubeButton.Text = "CUBE";
+            this.cubeButton.Text = "Cube";
             this.cubeButton.UseVisualStyleBackColor = true;
             this.cubeButton.Click += new System.EventHandler(this.cubeButton_Click);
             // 
             // pyramidButton
             // 
-            this.pyramidButton.Location = new System.Drawing.Point(35, 546);
-            this.pyramidButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pyramidButton.Location = new System.Drawing.Point(95, 484);
+            this.pyramidButton.Margin = new System.Windows.Forms.Padding(4);
             this.pyramidButton.Name = "pyramidButton";
             this.pyramidButton.Size = new System.Drawing.Size(100, 28);
             this.pyramidButton.TabIndex = 12;
@@ -257,8 +259,8 @@ namespace _18120320_Lab1
             this.panel1.Controls.Add(this.posXInput);
             this.panel1.Controls.Add(this.objNameInput);
             this.panel1.Controls.Add(this.x);
-            this.panel1.Location = new System.Drawing.Point(1523, 406);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(1551, 543);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(359, 273);
             this.panel1.TabIndex = 13;
@@ -278,7 +280,7 @@ namespace _18120320_Lab1
             // scalZInput
             // 
             this.scalZInput.Location = new System.Drawing.Point(265, 217);
-            this.scalZInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scalZInput.Margin = new System.Windows.Forms.Padding(4);
             this.scalZInput.Name = "scalZInput";
             this.scalZInput.Size = new System.Drawing.Size(60, 22);
             this.scalZInput.TabIndex = 20;
@@ -299,7 +301,7 @@ namespace _18120320_Lab1
             // scalYInput
             // 
             this.scalYInput.Location = new System.Drawing.Point(151, 215);
-            this.scalYInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scalYInput.Margin = new System.Windows.Forms.Padding(4);
             this.scalYInput.Name = "scalYInput";
             this.scalYInput.Size = new System.Drawing.Size(60, 22);
             this.scalYInput.TabIndex = 18;
@@ -320,7 +322,7 @@ namespace _18120320_Lab1
             // scalXInput
             // 
             this.scalXInput.Location = new System.Drawing.Point(37, 214);
-            this.scalXInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scalXInput.Margin = new System.Windows.Forms.Padding(4);
             this.scalXInput.Name = "scalXInput";
             this.scalXInput.Size = new System.Drawing.Size(60, 22);
             this.scalXInput.TabIndex = 16;
@@ -352,7 +354,7 @@ namespace _18120320_Lab1
             // rotZInput
             // 
             this.rotZInput.Location = new System.Drawing.Point(271, 148);
-            this.rotZInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rotZInput.Margin = new System.Windows.Forms.Padding(4);
             this.rotZInput.Name = "rotZInput";
             this.rotZInput.Size = new System.Drawing.Size(60, 22);
             this.rotZInput.TabIndex = 13;
@@ -373,7 +375,7 @@ namespace _18120320_Lab1
             // rotYInput
             // 
             this.rotYInput.Location = new System.Drawing.Point(156, 146);
-            this.rotYInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rotYInput.Margin = new System.Windows.Forms.Padding(4);
             this.rotYInput.Name = "rotYInput";
             this.rotYInput.Size = new System.Drawing.Size(60, 22);
             this.rotYInput.TabIndex = 11;
@@ -394,7 +396,7 @@ namespace _18120320_Lab1
             // rotXInput
             // 
             this.rotXInput.Location = new System.Drawing.Point(43, 145);
-            this.rotXInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rotXInput.Margin = new System.Windows.Forms.Padding(4);
             this.rotXInput.Name = "rotXInput";
             this.rotXInput.Size = new System.Drawing.Size(60, 22);
             this.rotXInput.TabIndex = 9;
@@ -426,7 +428,7 @@ namespace _18120320_Lab1
             // posZInput
             // 
             this.posZInput.Location = new System.Drawing.Point(271, 76);
-            this.posZInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.posZInput.Margin = new System.Windows.Forms.Padding(4);
             this.posZInput.Name = "posZInput";
             this.posZInput.Size = new System.Drawing.Size(60, 22);
             this.posZInput.TabIndex = 6;
@@ -447,7 +449,7 @@ namespace _18120320_Lab1
             // posYInput
             // 
             this.posYInput.Location = new System.Drawing.Point(156, 75);
-            this.posYInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.posYInput.Margin = new System.Windows.Forms.Padding(4);
             this.posYInput.Name = "posYInput";
             this.posYInput.Size = new System.Drawing.Size(60, 22);
             this.posYInput.TabIndex = 4;
@@ -468,7 +470,7 @@ namespace _18120320_Lab1
             // posXInput
             // 
             this.posXInput.Location = new System.Drawing.Point(43, 74);
-            this.posXInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.posXInput.Margin = new System.Windows.Forms.Padding(4);
             this.posXInput.Name = "posXInput";
             this.posXInput.Size = new System.Drawing.Size(60, 22);
             this.posXInput.TabIndex = 2;
@@ -478,7 +480,7 @@ namespace _18120320_Lab1
             // 
             this.objNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.objNameInput.Location = new System.Drawing.Point(4, 9);
-            this.objNameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.objNameInput.Margin = new System.Windows.Forms.Padding(4);
             this.objNameInput.Name = "objNameInput";
             this.objNameInput.Size = new System.Drawing.Size(132, 24);
             this.objNameInput.TabIndex = 1;
@@ -499,8 +501,8 @@ namespace _18120320_Lab1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(35, 588);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(95, 552);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 12;
@@ -512,17 +514,17 @@ namespace _18120320_Lab1
             // 
             this.objectList.FormattingEnabled = true;
             this.objectList.ItemHeight = 16;
-            this.objectList.Location = new System.Drawing.Point(1523, 12);
+            this.objectList.Location = new System.Drawing.Point(1554, 11);
             this.objectList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.objectList.Name = "objectList";
-            this.objectList.Size = new System.Drawing.Size(357, 340);
+            this.objectList.Size = new System.Drawing.Size(357, 436);
             this.objectList.TabIndex = 22;
             this.objectList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.objectListClick);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(1836, 361);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Location = new System.Drawing.Point(1707, 484);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(44, 28);
             this.deleteButton.TabIndex = 23;
@@ -532,14 +534,22 @@ namespace _18120320_Lab1
             // 
             // selecttexture
             // 
-            this.selecttexture.Location = new System.Drawing.Point(35, 387);
+            this.selecttexture.Location = new System.Drawing.Point(13, 677);
             this.selecttexture.Margin = new System.Windows.Forms.Padding(4);
             this.selecttexture.Name = "selecttexture";
-            this.selecttexture.Size = new System.Drawing.Size(100, 28);
+            this.selecttexture.Size = new System.Drawing.Size(237, 33);
             this.selecttexture.TabIndex = 11;
             this.selecttexture.Text = "select texture";
             this.selecttexture.UseVisualStyleBackColor = true;
             this.selecttexture.Click += new System.EventHandler(this.textureSelect_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(13, 721);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 213);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // SharpGLForm
             // 
@@ -547,6 +557,7 @@ namespace _18120320_Lab1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1923, 961);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.objectList);
             this.Controls.Add(this.panel1);
@@ -556,13 +567,14 @@ namespace _18120320_Lab1
             this.Controls.Add(this.cubeButton);
             this.Controls.Add(this.colorHexagon);
             this.Controls.Add(this.openGLControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1799, 998);
             this.Name = "SharpGLForm";
             this.Text = "18120320-Bui_Huu_Duc";
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -615,5 +627,6 @@ namespace _18120320_Lab1
         private System.Windows.Forms.ListBox objectList;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button selecttexture;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

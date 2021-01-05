@@ -9,35 +9,32 @@ using System.Threading.Tasks;
 
 namespace _18120320_Lab1
 {
-    class Prism : Object
+    class Prism: Object
     {
-        float _length = 1f; //độ dài cạnh cua mat day tam giac
-        float _height = 1.0f; // chieu cao cua lang tru
+        float _length = 2.0f; // canh day
+        float _height = 2.0f; // chieu cao 
         double alpha = 2 * Math.PI / 3;
-        double R_bot;
+        double R;
         public Prism() : base()
         {
-            R_bot = Math.Sqrt(3) * _length / 3;
-
             Type = 2;
         }
         public override void Draw(OpenGL gl)
         {
-            _length = (float)(ScaleX / 3);
-            _height = (float)(ScaleY);
+            _length = (float)(ScaleX) * 2.0f;
+            _height = (float)(ScaleY) * 2.0f;
 
             gl.Rotate(RotateX, RotateY, RotateZ);
 
-            R_bot = Math.Sqrt(3) * _length / 3;
+            R = Math.Sqrt(3) * _length / 3;
 
-            //set drawing color
             gl.Color(ObjColor.R / 255.0, ObjColor.G / 255.0, ObjColor.B / 255.0);
 
-            //3 diem dau la mot tam giac
-            CustomPoint V1 = new CustomPoint(Center.X + R_bot, Center.Y - _height / 2, Center.Z);
-            CustomPoint V2 = new CustomPoint(Center.X + R_bot * Math.Cos(alpha), Center.Y - _height / 2, Center.Z + R_bot * Math.Sin(alpha));
-            CustomPoint V3 = new CustomPoint(Center.X + R_bot * Math.Cos(2 * alpha), Center.Y - _height / 2, Center.Z + R_bot * Math.Sin(2 * alpha));
-            //3 diem con lai cung tao nen mot mat tam giac
+            //tam giac duoi
+            CustomPoint V1 = new CustomPoint(Center.X + R, Center.Y - _height / 2, Center.Z);
+            CustomPoint V2 = new CustomPoint(Center.X + R * Math.Cos(alpha), Center.Y - _height / 2, Center.Z + R * Math.Sin(alpha));
+            CustomPoint V3 = new CustomPoint(Center.X + R * Math.Cos(2 * alpha), Center.Y - _height / 2, Center.Z + R * Math.Sin(2 * alpha));
+            //tam giac tren
             CustomPoint V4 = new CustomPoint(V1.X, Center.Y + _height / 2, V1.Z);
             CustomPoint V5 = new CustomPoint(V2.X, Center.Y + _height / 2, V2.Z);
             CustomPoint V6 = new CustomPoint(V3.X, Center.Y + _height / 2, V3.Z);
@@ -114,7 +111,7 @@ namespace _18120320_Lab1
             gl.Rotate(-RotateX, -RotateY, -RotateZ);
         }
 
-        public override double ScaleX 
+        public override double ScaleX
         {
             set
             {
@@ -140,4 +137,3 @@ namespace _18120320_Lab1
         }
     }
 }
-

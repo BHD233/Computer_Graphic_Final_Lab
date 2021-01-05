@@ -284,7 +284,6 @@ namespace _18120320_Lab1
         {
             // Get vị trí click chuột
             int index = this.objectList.IndexFromPoint(e.Location);
-            Console.WriteLine(index);
 
             //nếu chuột nằm trên item có vị trí index thì drawObject[index] được tô viền màu
             if (index != -1)
@@ -348,6 +347,9 @@ namespace _18120320_Lab1
                 string filePath = dialog.FileName.ToString();
                 Texture texture = new Texture();
                 texture.Create(openGLControl.OpenGL, filePath);
+                //show texture
+                pictureBox1.BackgroundImage = Image.FromFile(filePath);
+
                 //set texture
                 drawObjs[chosenObj].Texture = texture;
             }
@@ -371,11 +373,11 @@ namespace _18120320_Lab1
         {
             if (e.KeyData == Keys.Z)
             {
-                zoom++;
+                camera.ZoomIn();
             }
             if (e.KeyData == Keys.X)
             {
-                zoom--;
+                camera.ZoomOut();
             }
 
         }
